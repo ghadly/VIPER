@@ -7,8 +7,9 @@
 //
 
 import XCTest
+@testable import ViperArchitecture
 
-class AuthenticationModuleInteractorTests: XCTestCase {
+class RecipesModuleInteractorTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
@@ -20,7 +21,9 @@ class AuthenticationModuleInteractorTests: XCTestCase {
         super.tearDown()
     }
 
-    class MockPresenter: AuthenticationModuleInteractorOutput {
-
+    class MockPresenter: RecipesModuleInteractorOutput {
+        func recipesFetched(recipes: Recipes?, error: Error?) {
+            
+        }
     }
 }

@@ -27,7 +27,6 @@
 		9DE3A5B322574BBB00545750 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DE3A5B122574BBB00545750 /* Main.storyboard */; };
 		9DE3A5B522574BBD00545750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DE3A5B422574BBD00545750 /* Assets.xcassets */; };
 		9DE3A5B822574BBD00545750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DE3A5B622574BBD00545750 /* LaunchScreen.storyboard */; };
-		9DE3A5C322574BBD00545750 /* ViperArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3A5C222574BBD00545750 /* ViperArchitectureTests.swift */; };
 		9DE3A5CE22574BBD00545750 /* ViperArchitectureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3A5CD22574BBD00545750 /* ViperArchitectureUITests.swift */; };
 		9DE3A653225782FD00545750 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3A652225782FD00545750 /* Recipe.swift */; };
 		9DE3A65B22578EA000545750 /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3A65922578EA000545750 /* BaseNetwork.swift */; };
@@ -77,7 +76,6 @@
 		9DE3A5B722574BBD00545750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DE3A5B922574BBD00545750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DE3A5BE22574BBD00545750 /* ViperArchitectureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViperArchitectureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9DE3A5C222574BBD00545750 /* ViperArchitectureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperArchitectureTests.swift; sourceTree = "<group>"; };
 		9DE3A5C422574BBD00545750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DE3A5C922574BBD00545750 /* ViperArchitectureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViperArchitectureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE3A5CD22574BBD00545750 /* ViperArchitectureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperArchitectureUITests.swift; sourceTree = "<group>"; };
@@ -264,7 +262,6 @@
 			isa = PBXGroup;
 			children = (
 				9DA5B0FE22AAABFE005F7723 /* RecipesModule */,
-				9DE3A5C222574BBD00545750 /* ViperArchitectureTests.swift */,
 				9DE3A5C422574BBD00545750 /* Info.plist */,
 			);
 			path = ViperArchitectureTests;
@@ -481,7 +478,6 @@
 			files = (
 				9DA5B10922AAABFE005F7723 /* RecipesModulePresenterTests.swift in Sources */,
 				9DA5B10C22AAABFE005F7723 /* RecipesModuleInteractorTests.swift in Sources */,
-				9DE3A5C322574BBD00545750 /* ViperArchitectureTests.swift in Sources */,
 				9DA5B10B22AAABFE005F7723 /* RecipesModuleConfiguratorTests.swift in Sources */,
 				9DA5B10D22AAABFE005F7723 /* RecipesModuleRouterTests.swift in Sources */,
 				9DA5B10A22AAABFE005F7723 /* RecipesModuleViewTests.swift in Sources */,
@@ -652,11 +648,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = ViperArchitecture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MODULE_NAME = ViperArchitecture;
 				PRODUCT_BUNDLE_IDENTIFIER = com.viper.ViperArchitecture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -669,11 +667,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = ViperArchitecture/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MODULE_NAME = ViperArchitecture;
 				PRODUCT_BUNDLE_IDENTIFIER = com.viper.ViperArchitecture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

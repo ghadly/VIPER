@@ -8,7 +8,7 @@
 
 import XCTest
 
-class AuthenticationModuleRouterTests: XCTestCase {
+class RecipesModuleRouterTests: XCTestCase {
 
     override func setUp() {
         super.setUp()

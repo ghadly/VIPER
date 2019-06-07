@@ -7,8 +7,9 @@
 //
 
 import XCTest
+@testable import ViperArchitecture
 
-class AuthenticationModuleModuleConfiguratorTests: XCTestCase {
+class RecipesModuleModuleConfiguratorTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
@@ -23,30 +24,31 @@ class AuthenticationModuleModuleConfiguratorTests: XCTestCase {
     func testConfigureModuleForViewController() {
 
         //given
-        let viewController = AuthenticationModuleViewControllerMock()
-        let configurator = AuthenticationModuleModuleConfigurator()
+        let viewController = RecipesModuleViewControllerMock()
+        let configurator = RecipesModuleConfigurator()
 
         //when
         configurator.configureModuleForViewInput(viewInput: viewController)
 
         //then
-        XCTAssertNotNil(viewController.output, "AuthenticationModuleViewController is nil after configuration")
-        XCTAssertTrue(viewController.output is AuthenticationModulePresenter, "output is not AuthenticationModulePresenter")
+        XCTAssertNotNil(viewController.viewToPresenterProtocol, "AuthenticationModuleViewController is nil after configuration")
+        XCTAssertTrue(viewController.viewToPresenterProtocol is RecipesModulePresenter, "output is not AuthenticationModulePresenter")
 
-        let presenter: AuthenticationModulePresenter = viewController.output as! AuthenticationModulePresenter
+        let presenter: RecipesModulePresenter = viewController.viewToPresenterProtocol as! RecipesModulePresenter
         XCTAssertNotNil(presenter.view, "view in AuthenticationModulePresenter is nil after configuration")
         XCTAssertNotNil(presenter.router, "router in AuthenticationModulePresenter is nil after configuration")
-        XCTAssertTrue(presenter.router is AuthenticationModuleRouter, "router is not AuthenticationModuleRouter")
+        XCTAssertTrue(presenter.router is RecipesModuleRouter, "router is not AuthenticationModuleRouter")
 
-        let interactor: AuthenticationModuleInteractor = presenter.interactor as! AuthenticationModuleInteractor
-        XCTAssertNotNil(interactor.output, "output in AuthenticationModuleInteractor is nil after configuration")
+        let interactor: RecipesModuleInteractor = presenter.interactor as! RecipesModuleInteractor
+        XCTAssertNotNil(interactor.interactorToPresenterProtocol, "output in AuthenticationModuleInteractor is nil after configuration")
     }
 
-    class AuthenticationModuleViewControllerMock: AuthenticationModuleViewController {
+    
+    class RecipesModuleViewControllerMock: RecipesModuleViewController {
 
         var setupInitialStateDidCall = false
 
-        override func setupInitialState() {
+        override func viewDidLoad() {
             setupInitialStateDidCall = true
         }
     }

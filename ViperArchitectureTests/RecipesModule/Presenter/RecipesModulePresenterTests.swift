@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import ViperArchitecture
 
 class AuthenticationModulePresenterTest: XCTestCase {
 
@@ -20,15 +21,27 @@ class AuthenticationModulePresenterTest: XCTestCase {
         super.tearDown()
     }
 
-    class MockInteractor: AuthenticationModuleInteractorInput {
+    class MockInteractor: RecipesModuleInteractorInput {
+        func fetchRecipes() {
+            
+        }
+    }
+
+    class MockRouter: RecipesModuleRouterInput {
+        func openRecipeDetailsScreen(with recipe: Recipe) {
+            
+        }
+        
 
     }
 
-    class MockRouter: AuthenticationModuleRouterInput {
-
-    }
-
-    class MockViewController: AuthenticationModuleViewInput {
+    class MockViewController: RecipesModuleViewInput {
+        func showRecipes(recipes: Recipes) {
+            
+        }
+        
+        func showErrorMessage() {
+        }
 
         func setupInitialState() {
 

@@ -7,12 +7,12 @@
 //
 import Foundation
 
-class AuthenticationModuleInteractor {
+class RecipesModuleInteractor {
 
-    weak var interactorToPresenterProtocol: AuthenticationModuleInteractorOutput!
+    weak var interactorToPresenterProtocol: RecipesModuleInteractorOutput!
 }
 
-extension AuthenticationModuleInteractor: RecipesModuleInteractorInput {
+extension RecipesModuleInteractor: RecipesModuleInteractorInput {
     func fetchRecipes() {
         NetworkRequester.getRecipes { (data, response, error) in
             if let responseData = data {

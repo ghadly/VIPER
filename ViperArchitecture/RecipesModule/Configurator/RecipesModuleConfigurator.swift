@@ -25,7 +25,7 @@ class RecipesModuleConfigurator {
         presenter.view = viewController
         presenter.router = router
 
-        let interactor = AuthenticationModuleInteractor()
+        let interactor = RecipesModuleInteractor()
         interactor.interactorToPresenterProtocol = presenter
 
         presenter.interactor = interactor

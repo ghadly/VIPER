@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol AuthenticationModuleInteractorOutput: class {
+protocol RecipesModuleInteractorOutput: class {
     
     func recipesFetched(recipes: Recipes?,  error: Error?)
 }

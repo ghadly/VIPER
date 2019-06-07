@@ -25,7 +25,7 @@ extension RecipesModulePresenter: RecipesModuleViewOutput {
     }
 }
 
-extension RecipesModulePresenter: AuthenticationModuleInteractorOutput {
+extension RecipesModulePresenter: RecipesModuleInteractorOutput {
     func recipesFetched(recipes: Recipes?, error: Error?) {
         if let recipesObject = recipes {
             view.showRecipes(recipes: recipesObject)
