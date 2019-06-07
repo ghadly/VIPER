@@ -7,15 +7,15 @@
 //
 import Foundation
 
-class AuthenticationModulePresenter {
+class RecipesModulePresenter {
 
-    weak var view: AuthenticationModuleViewInput!
-    var interactor: AuthenticationModuleInteractorInput!
-    var router: AuthenticationModuleRouterInput!
+    weak var view: RecipesModuleViewInput!
+    var interactor: RecipesModuleInteractorInput!
+    var router: RecipesModuleRouterInput!
 }
 
 
-extension AuthenticationModulePresenter: AuthenticationModuleViewOutput {
+extension RecipesModulePresenter: RecipesModuleViewOutput {
     func viewIsReady() {
         interactor.fetchRecipes()
     }
@@ -25,7 +25,7 @@ extension AuthenticationModulePresenter: AuthenticationModuleViewOutput {
     }
 }
 
-extension AuthenticationModulePresenter: AuthenticationModuleInteractorOutput {
+extension RecipesModulePresenter: AuthenticationModuleInteractorOutput {
     func recipesFetched(recipes: Recipes?, error: Error?) {
         if let recipesObject = recipes {
             view.showRecipes(recipes: recipesObject)

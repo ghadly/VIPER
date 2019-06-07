@@ -8,14 +8,14 @@
 
 import UIKit
 
-class AuthenticationModuleModuleInitializer: NSObject {
+class RecipesModuleInitializer: NSObject {
 
     //Connect with object on storyboard
-    @IBOutlet weak var authenticationmoduleViewController: AuthenticationModuleViewController!
+    @IBOutlet weak var authenticationmoduleViewController: RecipesModuleViewController!
 
     override func awakeFromNib() {
 
-        let configurator = AuthenticationModuleModuleConfigurator()
+        let configurator = RecipesModuleConfigurator()
         configurator.configureModuleForViewInput(viewInput: authenticationmoduleViewController)
     }
 

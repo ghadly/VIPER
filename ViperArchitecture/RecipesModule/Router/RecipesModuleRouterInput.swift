@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol AuthenticationModuleRouterInput {
+protocol RecipesModuleRouterInput {
     func openRecipeDetailsScreen(with recipe: Recipe)
 }

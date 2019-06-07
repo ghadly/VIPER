@@ -7,7 +7,7 @@
 //
 
 // PresenterToViewProtocol
-protocol AuthenticationModuleViewInput: class {
+protocol RecipesModuleViewInput: class {
 
     /**
         @author Georgehadly

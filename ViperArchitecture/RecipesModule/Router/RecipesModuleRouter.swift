@@ -6,11 +6,11 @@
 //  Copyright © 2019 George. All rights reserved.
 //
 
-class AuthenticationModuleRouter {
+class RecipesModuleRouter {
 
 }
 
-extension AuthenticationModuleRouter: AuthenticationModuleRouterInput {
+extension RecipesModuleRouter: RecipesModuleRouterInput {
     func openRecipeDetailsScreen(with recipe: Recipe) {
         //Mark: this will call another module to open the details screen
     }

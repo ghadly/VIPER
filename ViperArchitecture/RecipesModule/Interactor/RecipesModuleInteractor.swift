@@ -12,7 +12,7 @@ class AuthenticationModuleInteractor {
     weak var interactorToPresenterProtocol: AuthenticationModuleInteractorOutput!
 }
 
-extension AuthenticationModuleInteractor: AuthenticationModuleInteractorInput {
+extension AuthenticationModuleInteractor: RecipesModuleInteractorInput {
     func fetchRecipes() {
         NetworkRequester.getRecipes { (data, response, error) in
             if let responseData = data {

@@ -8,20 +8,20 @@
 
 import UIKit
 
-class AuthenticationModuleModuleConfigurator {
+class RecipesModuleConfigurator {
     
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
 
-        if let viewController = viewInput as? AuthenticationModuleViewController {
+        if let viewController = viewInput as? RecipesModuleViewController {
             configure(viewController: viewController)
         }
     }
 
-    private func configure(viewController: AuthenticationModuleViewController) {
+    private func configure(viewController: RecipesModuleViewController) {
 
-        let router = AuthenticationModuleRouter()
+        let router = RecipesModuleRouter()
 
-        let presenter = AuthenticationModulePresenter()
+        let presenter = RecipesModulePresenter()
         presenter.view = viewController
         presenter.router = router
 

@@ -8,10 +8,10 @@
 
 import UIKit
 
-class AuthenticationModuleViewController: UIViewController {
+class RecipesModuleViewController: UIViewController {
 
     @IBOutlet weak var recipesList: UITableView!
-    var viewToPresenterProtocol: AuthenticationModuleViewOutput!
+    var viewToPresenterProtocol: RecipesModuleViewOutput!
     
     private var recipes: Recipes? = nil {
         didSet {
@@ -25,7 +25,7 @@ class AuthenticationModuleViewController: UIViewController {
     }
 }
 
-extension AuthenticationModuleViewController: AuthenticationModuleViewInput {
+extension RecipesModuleViewController: RecipesModuleViewInput {
     func showRecipes(recipes: Recipes) {
         self.recipes = recipes
     }
@@ -37,13 +37,13 @@ extension AuthenticationModuleViewController: AuthenticationModuleViewInput {
     }
 }
 
-extension AuthenticationModuleViewController: UITableViewDelegate {
+extension RecipesModuleViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewToPresenterProtocol.showDetailsScreen(for: recipes!.data[indexPath.row])
     }
 }
 
-extension AuthenticationModuleViewController: UITableViewDataSource {
+extension RecipesModuleViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let recipe = recipes?.data[indexPath.row]

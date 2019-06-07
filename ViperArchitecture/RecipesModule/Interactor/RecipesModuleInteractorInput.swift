@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol AuthenticationModuleInteractorInput {
+protocol RecipesModuleInteractorInput {
     func fetchRecipes()
 }

@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		1515F6991603B78761F4456E /* AuthenticationModuleInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C73C04E542C41D2B6CEF44 /* AuthenticationModuleInteractorTests.swift */; };
-		254D54FFEC30CEF0E43C02B4 /* AuthenticationModuleViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51125E2A32EB219791346186 /* AuthenticationModuleViewOutput.swift */; };
-		2F7C2861FD3639DC3FC3EAC7 /* AuthenticationModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA0E85EBEDEB3A68CCE6443 /* AuthenticationModuleConfigurator.swift */; };
 		3D2C1499609FC04DCE506737 /* AuthenticationModulePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7937D581CE34F21A72EA3F01 /* AuthenticationModulePresenterTests.swift */; };
-		4442DBEC05BD48217F97DAFB /* AuthenticationModuleRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677BECB7AAF47EC0959F535 /* AuthenticationModuleRouterInput.swift */; };
-		61C9C3E85CE0BE1C81DDD878 /* AuthenticationModuleInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C941DDEA0F64D770C357A93 /* AuthenticationModuleInteractorInput.swift */; };
 		7644C9024B159EB5050FEC77 /* AuthenticationModuleRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF156805A3629889707C12E /* AuthenticationModuleRouterTests.swift */; };
-		8098100B29B08CE43AC63279 /* AuthenticationModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75D0DF03EE15CB10317EB75 /* AuthenticationModuleViewController.swift */; };
+		9DA5B0E322AAA6AF005F7723 /* RecipesModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0D422AAA6AF005F7723 /* RecipesModulePresenter.swift */; };
+		9DA5B0E422AAA6AF005F7723 /* RecipesModuleViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0D622AAA6AF005F7723 /* RecipesModuleViewInput.swift */; };
+		9DA5B0E522AAA6AF005F7723 /* RecipesModuleViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0D722AAA6AF005F7723 /* RecipesModuleViewOutput.swift */; };
+		9DA5B0E622AAA6AF005F7723 /* RecipesModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0D822AAA6AF005F7723 /* RecipesModuleViewController.swift */; };
+		9DA5B0E722AAA6AF005F7723 /* RecipesModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0DA22AAA6AF005F7723 /* RecipesModuleConfigurator.swift */; };
+		9DA5B0E822AAA6AF005F7723 /* RecipesModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0DB22AAA6AF005F7723 /* RecipesModuleInitializer.swift */; };
+		9DA5B0E922AAA6AF005F7723 /* RecipesModuleInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0DD22AAA6AF005F7723 /* RecipesModuleInteractorOutput.swift */; };
+		9DA5B0EA22AAA6AF005F7723 /* RecipesModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0DE22AAA6AF005F7723 /* RecipesModuleInteractor.swift */; };
+		9DA5B0EB22AAA6AF005F7723 /* RecipesModuleInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0DF22AAA6AF005F7723 /* RecipesModuleInteractorInput.swift */; };
+		9DA5B0EC22AAA6AF005F7723 /* RecipesModuleRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0E122AAA6AF005F7723 /* RecipesModuleRouterInput.swift */; };
+		9DA5B0ED22AAA6AF005F7723 /* RecipesModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0E222AAA6AF005F7723 /* RecipesModuleRouter.swift */; };
 		9DE3A5AE22574BBB00545750 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3A5AD22574BBB00545750 /* AppDelegate.swift */; };
 		9DE3A5B322574BBB00545750 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DE3A5B122574BBB00545750 /* Main.storyboard */; };
 		9DE3A5B522574BBD00545750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DE3A5B422574BBD00545750 /* Assets.xcassets */; };
@@ -27,13 +33,7 @@
 		9DE3A65F2257909A00545750 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3A65D2257909A00545750 /* Dictionary.swift */; };
 		9DE3A6602257909A00545750 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE3A65E2257909A00545750 /* String.swift */; };
 		A62EB1F63C156037FB9E3EC9 /* AuthenticationModuleViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6578DAA83ED663ADA205A226 /* AuthenticationModuleViewTests.swift */; };
-		AE835E932D2B3575B000253D /* AuthenticationModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EFA3CA2860BA9DC9A272BE /* AuthenticationModuleInteractor.swift */; };
-		AF38F60C0A47C393E3F1708F /* AuthenticationModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6689B0A15D69021DC2F39D /* AuthenticationModuleRouter.swift */; };
-		C69FEAC24282ECB7EBD4D3A4 /* AuthenticationModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72138DC509D0E2B9F07A27 /* AuthenticationModulePresenter.swift */; };
-		D3E8BC8EF003B9B9004B5D03 /* AuthenticationModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52467DA4F46FCF29173332DB /* AuthenticationModuleInitializer.swift */; };
 		D73CB7B3E52E713753016B6B /* AuthenticationModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666DF89E2ED6787ED89EC4E2 /* AuthenticationModuleConfiguratorTests.swift */; };
-		E8CD02451EFC76D303B71202 /* AuthenticationModuleInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E24EC21A94042CFC6F3DF7D /* AuthenticationModuleInteractorOutput.swift */; };
-		F6D8DEEDFF606303B4964765 /* AuthenticationModuleViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA154B6B62C87DE56E67006 /* AuthenticationModuleViewInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,17 +54,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3677BECB7AAF47EC0959F535 /* AuthenticationModuleRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationModuleRouterInput.swift; sourceTree = "<group>"; };
 		38C73C04E542C41D2B6CEF44 /* AuthenticationModuleInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationModuleInteractorTests.swift; sourceTree = "<group>"; };
-		51125E2A32EB219791346186 /* AuthenticationModuleViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationModuleViewOutput.swift; sourceTree = "<group>"; };
-		52467DA4F46FCF29173332DB /* AuthenticationModuleInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationModuleInitializer.swift; sourceTree = "<group>"; };
-		5C941DDEA0F64D770C357A93 /* AuthenticationModuleInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationModuleInteractorInput.swift; sourceTree = "<group>"; };
-		61EFA3CA2860BA9DC9A272BE /* AuthenticationModuleInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationModuleInteractor.swift; sourceTree = "<group>"; };
 		6578DAA83ED663ADA205A226 /* AuthenticationModuleViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationModuleViewTests.swift; sourceTree = "<group>"; };
 		666DF89E2ED6787ED89EC4E2 /* AuthenticationModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		6BF156805A3629889707C12E /* AuthenticationModuleRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationModuleRouterTests.swift; sourceTree = "<group>"; };
 		7937D581CE34F21A72EA3F01 /* AuthenticationModulePresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationModulePresenterTests.swift; sourceTree = "<group>"; };
-		7E24EC21A94042CFC6F3DF7D /* AuthenticationModuleInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationModuleInteractorOutput.swift; sourceTree = "<group>"; };
+		9DA5B0D422AAA6AF005F7723 /* RecipesModulePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModulePresenter.swift; sourceTree = "<group>"; };
+		9DA5B0D622AAA6AF005F7723 /* RecipesModuleViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModuleViewInput.swift; sourceTree = "<group>"; };
+		9DA5B0D722AAA6AF005F7723 /* RecipesModuleViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModuleViewOutput.swift; sourceTree = "<group>"; };
+		9DA5B0D822AAA6AF005F7723 /* RecipesModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModuleViewController.swift; sourceTree = "<group>"; };
+		9DA5B0DA22AAA6AF005F7723 /* RecipesModuleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModuleConfigurator.swift; sourceTree = "<group>"; };
+		9DA5B0DB22AAA6AF005F7723 /* RecipesModuleInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModuleInitializer.swift; sourceTree = "<group>"; };
+		9DA5B0DD22AAA6AF005F7723 /* RecipesModuleInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModuleInteractorOutput.swift; sourceTree = "<group>"; };
+		9DA5B0DE22AAA6AF005F7723 /* RecipesModuleInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModuleInteractor.swift; sourceTree = "<group>"; };
+		9DA5B0DF22AAA6AF005F7723 /* RecipesModuleInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModuleInteractorInput.swift; sourceTree = "<group>"; };
+		9DA5B0E122AAA6AF005F7723 /* RecipesModuleRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModuleRouterInput.swift; sourceTree = "<group>"; };
+		9DA5B0E222AAA6AF005F7723 /* RecipesModuleRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModuleRouter.swift; sourceTree = "<group>"; };
 		9DE3A5AA22574BBB00545750 /* ViperArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE3A5AD22574BBB00545750 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DE3A5B222574BBB00545750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,11 +87,6 @@
 		9DE3A65A22578EA000545750 /* NetworkRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequester.swift; sourceTree = "<group>"; };
 		9DE3A65D2257909A00545750 /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		9DE3A65E2257909A00545750 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		CB6689B0A15D69021DC2F39D /* AuthenticationModuleRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationModuleRouter.swift; sourceTree = "<group>"; };
-		D75D0DF03EE15CB10317EB75 /* AuthenticationModuleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationModuleViewController.swift; sourceTree = "<group>"; };
-		EBA154B6B62C87DE56E67006 /* AuthenticationModuleViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationModuleViewInput.swift; sourceTree = "<group>"; };
-		EEA0E85EBEDEB3A68CCE6443 /* AuthenticationModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationModuleConfigurator.swift; sourceTree = "<group>"; };
-		FB72138DC509D0E2B9F07A27 /* AuthenticationModulePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationModulePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,39 +138,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		4A9F1306542EDC6013022D2D /* Configurator */ = {
-			isa = PBXGroup;
-			children = (
-				EEA0E85EBEDEB3A68CCE6443 /* AuthenticationModuleConfigurator.swift */,
-				52467DA4F46FCF29173332DB /* AuthenticationModuleInitializer.swift */,
-			);
-			path = Configurator;
-			sourceTree = "<group>";
-		};
 		74EC5BBC1CDDDFE0F1961DD2 /* Router */ = {
 			isa = PBXGroup;
 			children = (
 				6BF156805A3629889707C12E /* AuthenticationModuleRouterTests.swift */,
 			);
 			path = Router;
-			sourceTree = "<group>";
-		};
-		792F6F12B722CA601AF874F6 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				EBA154B6B62C87DE56E67006 /* AuthenticationModuleViewInput.swift */,
-				51125E2A32EB219791346186 /* AuthenticationModuleViewOutput.swift */,
-				D75D0DF03EE15CB10317EB75 /* AuthenticationModuleViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		8C11BF40F5BBA21F3BBBC35A /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				FB72138DC509D0E2B9F07A27 /* AuthenticationModulePresenter.swift */,
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		9CA4F1B85205A68D1180856C /* AuthenticationModule */ = {
@@ -183,6 +156,64 @@
 				74EC5BBC1CDDDFE0F1961DD2 /* Router */,
 			);
 			path = AuthenticationModule;
+			sourceTree = "<group>";
+		};
+		9DA5B0D222AAA6AF005F7723 /* RecipesModule */ = {
+			isa = PBXGroup;
+			children = (
+				9DA5B0D322AAA6AF005F7723 /* Presenter */,
+				9DA5B0D522AAA6AF005F7723 /* View */,
+				9DA5B0D922AAA6AF005F7723 /* Configurator */,
+				9DA5B0DC22AAA6AF005F7723 /* Interactor */,
+				9DA5B0E022AAA6AF005F7723 /* Router */,
+			);
+			path = RecipesModule;
+			sourceTree = "<group>";
+		};
+		9DA5B0D322AAA6AF005F7723 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9DA5B0D422AAA6AF005F7723 /* RecipesModulePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9DA5B0D522AAA6AF005F7723 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9DA5B0D622AAA6AF005F7723 /* RecipesModuleViewInput.swift */,
+				9DA5B0D722AAA6AF005F7723 /* RecipesModuleViewOutput.swift */,
+				9DA5B0D822AAA6AF005F7723 /* RecipesModuleViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9DA5B0D922AAA6AF005F7723 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				9DA5B0DA22AAA6AF005F7723 /* RecipesModuleConfigurator.swift */,
+				9DA5B0DB22AAA6AF005F7723 /* RecipesModuleInitializer.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		9DA5B0DC22AAA6AF005F7723 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9DA5B0DD22AAA6AF005F7723 /* RecipesModuleInteractorOutput.swift */,
+				9DA5B0DE22AAA6AF005F7723 /* RecipesModuleInteractor.swift */,
+				9DA5B0DF22AAA6AF005F7723 /* RecipesModuleInteractorInput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9DA5B0E022AAA6AF005F7723 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9DA5B0E122AAA6AF005F7723 /* RecipesModuleRouterInput.swift */,
+				9DA5B0E222AAA6AF005F7723 /* RecipesModuleRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		9DE3A5A122574BBB00545750 = {
@@ -208,6 +239,7 @@
 		9DE3A5AC22574BBB00545750 /* ViperArchitecture */ = {
 			isa = PBXGroup;
 			children = (
+				9DA5B0D222AAA6AF005F7723 /* RecipesModule */,
 				9DE3A6612257926A00545750 /* extentions */,
 				9DE3A65422578C1000545750 /* UIComponent */,
 				9DE3A64F2257823300545750 /* NetworkLayer */,
@@ -216,7 +248,6 @@
 				9DE3A5B422574BBD00545750 /* Assets.xcassets */,
 				9DE3A5B622574BBD00545750 /* LaunchScreen.storyboard */,
 				9DE3A5B922574BBD00545750 /* Info.plist */,
-				A715398839BB9A8318126CBB /* AuthenticationModule */,
 			);
 			path = ViperArchitecture;
 			sourceTree = "<group>";
@@ -282,43 +313,12 @@
 			path = extentions;
 			sourceTree = "<group>";
 		};
-		A715398839BB9A8318126CBB /* AuthenticationModule */ = {
-			isa = PBXGroup;
-			children = (
-				792F6F12B722CA601AF874F6 /* View */,
-				8C11BF40F5BBA21F3BBBC35A /* Presenter */,
-				BFE8FE6F869B250E0331687C /* Interactor */,
-				D21055F4C55DDB964E636D66 /* Router */,
-				4A9F1306542EDC6013022D2D /* Configurator */,
-			);
-			path = AuthenticationModule;
-			sourceTree = "<group>";
-		};
 		A9483C97CC292A5AACFA213F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
 				7937D581CE34F21A72EA3F01 /* AuthenticationModulePresenterTests.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		BFE8FE6F869B250E0331687C /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				5C941DDEA0F64D770C357A93 /* AuthenticationModuleInteractorInput.swift */,
-				7E24EC21A94042CFC6F3DF7D /* AuthenticationModuleInteractorOutput.swift */,
-				61EFA3CA2860BA9DC9A272BE /* AuthenticationModuleInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		D21055F4C55DDB964E636D66 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				3677BECB7AAF47EC0959F535 /* AuthenticationModuleRouterInput.swift */,
-				CB6689B0A15D69021DC2F39D /* AuthenticationModuleRouter.swift */,
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,22 +456,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DE3A6602257909A00545750 /* String.swift in Sources */,
+				9DA5B0ED22AAA6AF005F7723 /* RecipesModuleRouter.swift in Sources */,
+				9DA5B0E922AAA6AF005F7723 /* RecipesModuleInteractorOutput.swift in Sources */,
+				9DA5B0EA22AAA6AF005F7723 /* RecipesModuleInteractor.swift in Sources */,
+				9DA5B0EB22AAA6AF005F7723 /* RecipesModuleInteractorInput.swift in Sources */,
 				9DE3A65B22578EA000545750 /* BaseNetwork.swift in Sources */,
 				9DE3A5AE22574BBB00545750 /* AppDelegate.swift in Sources */,
-				F6D8DEEDFF606303B4964765 /* AuthenticationModuleViewInput.swift in Sources */,
-				254D54FFEC30CEF0E43C02B4 /* AuthenticationModuleViewOutput.swift in Sources */,
+				9DA5B0E522AAA6AF005F7723 /* RecipesModuleViewOutput.swift in Sources */,
+				9DA5B0E722AAA6AF005F7723 /* RecipesModuleConfigurator.swift in Sources */,
+				9DA5B0E422AAA6AF005F7723 /* RecipesModuleViewInput.swift in Sources */,
 				9DE3A65F2257909A00545750 /* Dictionary.swift in Sources */,
-				8098100B29B08CE43AC63279 /* AuthenticationModuleViewController.swift in Sources */,
-				C69FEAC24282ECB7EBD4D3A4 /* AuthenticationModulePresenter.swift in Sources */,
-				61C9C3E85CE0BE1C81DDD878 /* AuthenticationModuleInteractorInput.swift in Sources */,
-				E8CD02451EFC76D303B71202 /* AuthenticationModuleInteractorOutput.swift in Sources */,
-				AE835E932D2B3575B000253D /* AuthenticationModuleInteractor.swift in Sources */,
+				9DA5B0E622AAA6AF005F7723 /* RecipesModuleViewController.swift in Sources */,
+				9DA5B0EC22AAA6AF005F7723 /* RecipesModuleRouterInput.swift in Sources */,
 				9DE3A65C22578EA000545750 /* NetworkRequester.swift in Sources */,
 				9DE3A653225782FD00545750 /* Recipe.swift in Sources */,
-				4442DBEC05BD48217F97DAFB /* AuthenticationModuleRouterInput.swift in Sources */,
-				AF38F60C0A47C393E3F1708F /* AuthenticationModuleRouter.swift in Sources */,
-				2F7C2861FD3639DC3FC3EAC7 /* AuthenticationModuleConfigurator.swift in Sources */,
-				D3E8BC8EF003B9B9004B5D03 /* AuthenticationModuleInitializer.swift in Sources */,
+				9DA5B0E822AAA6AF005F7723 /* RecipesModuleInitializer.swift in Sources */,
+				9DA5B0E322AAA6AF005F7723 /* RecipesModulePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
