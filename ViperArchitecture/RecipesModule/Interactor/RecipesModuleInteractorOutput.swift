@@ -9,7 +9,7 @@
 import Foundation
 
 protocol RecipesModuleInteractorOutput: class {
-    
-    func recipesFetched(recipes: Recipes?,  error: Error?)
+    func recipesFetched(recipes: Recipes)
+    func failedToFetchRecipes(error: Error)
 }
 

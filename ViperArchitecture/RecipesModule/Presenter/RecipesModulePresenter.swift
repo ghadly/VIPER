@@ -26,11 +26,11 @@ extension RecipesModulePresenter: RecipesModuleViewOutput {
 }
 
 extension RecipesModulePresenter: RecipesModuleInteractorOutput {
-    func recipesFetched(recipes: Recipes?, error: Error?) {
-        if let recipesObject = recipes {
-            view.showRecipes(recipes: recipesObject)
-        } else {
-            view.showErrorMessage()
-        }
+    func recipesFetched(recipes: Recipes) {
+        view.showRecipes(recipes: recipes)
+    }
+    
+    func failedToFetchRecipes(error: Error) {
+        view.showErrorMessage()
     }
 }

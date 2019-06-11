@@ -9,7 +9,7 @@ import Foundation
 
 class RecipesModuleInteractor {
 
-    weak var interactorToPresenterProtocol: RecipesModuleInteractorOutput!
+    var interactorToPresenterProtocol: RecipesModuleInteractorOutput!
 }
 
 extension RecipesModuleInteractor: RecipesModuleInteractorInput {
@@ -19,13 +19,13 @@ extension RecipesModuleInteractor: RecipesModuleInteractorInput {
                 let decoder = JSONDecoder()
                 do {
                     let recipes = try decoder.decode(Recipes.self, from: responseData)
-                    self.interactorToPresenterProtocol.recipesFetched(recipes: recipes, error: nil)
+                    self.interactorToPresenterProtocol.recipesFetched(recipes: recipes)
                 } catch {
                     print("error trying to convert data to JSON")
-                    self.interactorToPresenterProtocol.recipesFetched(recipes: nil, error: nil)
+                    self.interactorToPresenterProtocol.failedToFetchRecipes(error: error)
                 }
             } else {
-                self.interactorToPresenterProtocol.recipesFetched(recipes: nil, error: error)
+                self.interactorToPresenterProtocol.failedToFetchRecipes(error: error!)
             }
         }
     }

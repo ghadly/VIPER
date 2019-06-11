@@ -37,13 +37,7 @@ extension RecipesModuleViewController: RecipesModuleViewInput {
     }
 }
 
-extension RecipesModuleViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewToPresenterProtocol.showDetailsScreen(for: recipes!.data[indexPath.row])
-    }
-}
-
-extension RecipesModuleViewController: UITableViewDataSource {
+extension RecipesModuleViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let recipe = recipes?.data[indexPath.row]
@@ -58,5 +52,9 @@ extension RecipesModuleViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipes?.data.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewToPresenterProtocol.showDetailsScreen(for: recipes!.data[indexPath.row])
     }
 }
