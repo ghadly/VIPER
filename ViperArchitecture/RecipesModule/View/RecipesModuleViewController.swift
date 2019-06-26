@@ -11,7 +11,7 @@ import UIKit
 class RecipesModuleViewController: UIViewController {
 
     @IBOutlet weak var recipesList: UITableView!
-    var viewToPresenterProtocol: RecipesModuleViewOutput!
+    var viewToPresenterProtocol: RecipesModuleViewToPresenter!
     
     private var recipes: Recipes? = nil {
         didSet {
@@ -25,7 +25,7 @@ class RecipesModuleViewController: UIViewController {
     }
 }
 
-extension RecipesModuleViewController: RecipesModuleViewInput {
+extension RecipesModuleViewController: RecipesModulePresenterToView {
     func showRecipes(recipes: Recipes) {
         self.recipes = recipes
     }

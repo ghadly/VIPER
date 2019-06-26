@@ -9,12 +9,12 @@
 import XCTest
 @testable import ViperArchitecture
 
-class AuthenticationModulePresenterTest: XCTestCase {
+class RecipesModulePresenterTests: XCTestCase {
 
     var presenter: MockPresenter = MockPresenter()
     var interactor: MockInteractor = MockInteractor()
     var router: MockRouter = MockRouter()
-    var view: RecipesModuleViewInput = MockView()
+    var view: RecipesModulePresenterToView = MockView()
     
     override func setUp() {
         super.setUp()
@@ -39,14 +39,14 @@ class AuthenticationModulePresenterTest: XCTestCase {
         XCTAssertTrue(interactor.fetchingRecipes)
     }
 
-    class MockInteractor: RecipesModuleInteractorInput {
+    class MockInteractor: RecipesModulePresenterToInteractor {
         var fetchingRecipes = false
         func fetchRecipes() {
             fetchingRecipes = true
         }
     }
 
-    class MockRouter: RecipesModuleRouterInput {
+    class MockRouter: RecipesModulePresenterToRouter {
         var didOpenDetails = false
         func openRecipeDetailsScreen(with recipe: Recipe) {
             didOpenDetails = true
@@ -56,7 +56,7 @@ class AuthenticationModulePresenterTest: XCTestCase {
     class MockPresenter: RecipesModulePresenter {
     }
     
-    class MockView: RecipesModuleViewInput {
+    class MockView: RecipesModulePresenterToView {
         var failedToLoad = false
         
         func showRecipes(recipes: Recipes) {

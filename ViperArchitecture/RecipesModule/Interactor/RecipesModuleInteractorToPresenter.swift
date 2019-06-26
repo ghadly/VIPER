@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol RecipesModuleInteractorOutput: class {
+protocol RecipesModuleInteractorToPresenter: class {
     func recipesFetched(recipes: Recipes)
     func failedToFetchRecipes(error: Error)
 }

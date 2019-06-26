@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		9DA5B0E322AAA6AF005F7723 /* RecipesModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0D422AAA6AF005F7723 /* RecipesModulePresenter.swift */; };
-		9DA5B0E422AAA6AF005F7723 /* RecipesModuleViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0D622AAA6AF005F7723 /* RecipesModuleViewInput.swift */; };
-		9DA5B0E522AAA6AF005F7723 /* RecipesModuleViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0D722AAA6AF005F7723 /* RecipesModuleViewOutput.swift */; };
+		9DA5B0E422AAA6AF005F7723 /* RecipesModulePresenterToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0D622AAA6AF005F7723 /* RecipesModulePresenterToView.swift */; };
+		9DA5B0E522AAA6AF005F7723 /* RecipesModuleViewToPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0D722AAA6AF005F7723 /* RecipesModuleViewToPresenter.swift */; };
 		9DA5B0E622AAA6AF005F7723 /* RecipesModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0D822AAA6AF005F7723 /* RecipesModuleViewController.swift */; };
 		9DA5B0E722AAA6AF005F7723 /* RecipesModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0DA22AAA6AF005F7723 /* RecipesModuleConfigurator.swift */; };
 		9DA5B0E822AAA6AF005F7723 /* RecipesModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0DB22AAA6AF005F7723 /* RecipesModuleInitializer.swift */; };
-		9DA5B0E922AAA6AF005F7723 /* RecipesModuleInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0DD22AAA6AF005F7723 /* RecipesModuleInteractorOutput.swift */; };
+		9DA5B0E922AAA6AF005F7723 /* RecipesModuleInteractorToPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0DD22AAA6AF005F7723 /* RecipesModuleInteractorToPresenter.swift */; };
 		9DA5B0EA22AAA6AF005F7723 /* RecipesModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0DE22AAA6AF005F7723 /* RecipesModuleInteractor.swift */; };
-		9DA5B0EB22AAA6AF005F7723 /* RecipesModuleInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0DF22AAA6AF005F7723 /* RecipesModuleInteractorInput.swift */; };
-		9DA5B0EC22AAA6AF005F7723 /* RecipesModuleRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0E122AAA6AF005F7723 /* RecipesModuleRouterInput.swift */; };
+		9DA5B0EB22AAA6AF005F7723 /* RecipesModulePresenterToInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0DF22AAA6AF005F7723 /* RecipesModulePresenterToInteractor.swift */; };
+		9DA5B0EC22AAA6AF005F7723 /* RecipesModulePresenterToRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0E122AAA6AF005F7723 /* RecipesModulePresenterToRouter.swift */; };
 		9DA5B0ED22AAA6AF005F7723 /* RecipesModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B0E222AAA6AF005F7723 /* RecipesModuleRouter.swift */; };
 		9DA5B10922AAABFE005F7723 /* RecipesModulePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B10022AAABFE005F7723 /* RecipesModulePresenterTests.swift */; };
 		9DA5B10A22AAABFE005F7723 /* RecipesModuleViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5B10222AAABFE005F7723 /* RecipesModuleViewTests.swift */; };
@@ -54,15 +54,15 @@
 
 /* Begin PBXFileReference section */
 		9DA5B0D422AAA6AF005F7723 /* RecipesModulePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModulePresenter.swift; sourceTree = "<group>"; };
-		9DA5B0D622AAA6AF005F7723 /* RecipesModuleViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModuleViewInput.swift; sourceTree = "<group>"; };
-		9DA5B0D722AAA6AF005F7723 /* RecipesModuleViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModuleViewOutput.swift; sourceTree = "<group>"; };
+		9DA5B0D622AAA6AF005F7723 /* RecipesModulePresenterToView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModulePresenterToView.swift; sourceTree = "<group>"; };
+		9DA5B0D722AAA6AF005F7723 /* RecipesModuleViewToPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModuleViewToPresenter.swift; sourceTree = "<group>"; };
 		9DA5B0D822AAA6AF005F7723 /* RecipesModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModuleViewController.swift; sourceTree = "<group>"; };
 		9DA5B0DA22AAA6AF005F7723 /* RecipesModuleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModuleConfigurator.swift; sourceTree = "<group>"; };
 		9DA5B0DB22AAA6AF005F7723 /* RecipesModuleInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModuleInitializer.swift; sourceTree = "<group>"; };
-		9DA5B0DD22AAA6AF005F7723 /* RecipesModuleInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModuleInteractorOutput.swift; sourceTree = "<group>"; };
+		9DA5B0DD22AAA6AF005F7723 /* RecipesModuleInteractorToPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModuleInteractorToPresenter.swift; sourceTree = "<group>"; };
 		9DA5B0DE22AAA6AF005F7723 /* RecipesModuleInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModuleInteractor.swift; sourceTree = "<group>"; };
-		9DA5B0DF22AAA6AF005F7723 /* RecipesModuleInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModuleInteractorInput.swift; sourceTree = "<group>"; };
-		9DA5B0E122AAA6AF005F7723 /* RecipesModuleRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModuleRouterInput.swift; sourceTree = "<group>"; };
+		9DA5B0DF22AAA6AF005F7723 /* RecipesModulePresenterToInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModulePresenterToInteractor.swift; sourceTree = "<group>"; };
+		9DA5B0E122AAA6AF005F7723 /* RecipesModulePresenterToRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModulePresenterToRouter.swift; sourceTree = "<group>"; };
 		9DA5B0E222AAA6AF005F7723 /* RecipesModuleRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModuleRouter.swift; sourceTree = "<group>"; };
 		9DA5B10022AAABFE005F7723 /* RecipesModulePresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModulePresenterTests.swift; sourceTree = "<group>"; };
 		9DA5B10222AAABFE005F7723 /* RecipesModuleViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModuleViewTests.swift; sourceTree = "<group>"; };
@@ -135,8 +135,8 @@
 		9DA5B0D522AAA6AF005F7723 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9DA5B0D622AAA6AF005F7723 /* RecipesModuleViewInput.swift */,
-				9DA5B0D722AAA6AF005F7723 /* RecipesModuleViewOutput.swift */,
+				9DA5B0D622AAA6AF005F7723 /* RecipesModulePresenterToView.swift */,
+				9DA5B0D722AAA6AF005F7723 /* RecipesModuleViewToPresenter.swift */,
 				9DA5B0D822AAA6AF005F7723 /* RecipesModuleViewController.swift */,
 			);
 			path = View;
@@ -154,9 +154,9 @@
 		9DA5B0DC22AAA6AF005F7723 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				9DA5B0DD22AAA6AF005F7723 /* RecipesModuleInteractorOutput.swift */,
+				9DA5B0DD22AAA6AF005F7723 /* RecipesModuleInteractorToPresenter.swift */,
 				9DA5B0DE22AAA6AF005F7723 /* RecipesModuleInteractor.swift */,
-				9DA5B0DF22AAA6AF005F7723 /* RecipesModuleInteractorInput.swift */,
+				9DA5B0DF22AAA6AF005F7723 /* RecipesModulePresenterToInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -164,7 +164,7 @@
 		9DA5B0E022AAA6AF005F7723 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				9DA5B0E122AAA6AF005F7723 /* RecipesModuleRouterInput.swift */,
+				9DA5B0E122AAA6AF005F7723 /* RecipesModulePresenterToRouter.swift */,
 				9DA5B0E222AAA6AF005F7723 /* RecipesModuleRouter.swift */,
 			);
 			path = Router;
@@ -454,17 +454,17 @@
 			files = (
 				9DE3A6602257909A00545750 /* String.swift in Sources */,
 				9DA5B0ED22AAA6AF005F7723 /* RecipesModuleRouter.swift in Sources */,
-				9DA5B0E922AAA6AF005F7723 /* RecipesModuleInteractorOutput.swift in Sources */,
+				9DA5B0E922AAA6AF005F7723 /* RecipesModuleInteractorToPresenter.swift in Sources */,
 				9DA5B0EA22AAA6AF005F7723 /* RecipesModuleInteractor.swift in Sources */,
-				9DA5B0EB22AAA6AF005F7723 /* RecipesModuleInteractorInput.swift in Sources */,
+				9DA5B0EB22AAA6AF005F7723 /* RecipesModulePresenterToInteractor.swift in Sources */,
 				9DE3A65B22578EA000545750 /* BaseNetwork.swift in Sources */,
 				9DE3A5AE22574BBB00545750 /* AppDelegate.swift in Sources */,
-				9DA5B0E522AAA6AF005F7723 /* RecipesModuleViewOutput.swift in Sources */,
+				9DA5B0E522AAA6AF005F7723 /* RecipesModuleViewToPresenter.swift in Sources */,
 				9DA5B0E722AAA6AF005F7723 /* RecipesModuleConfigurator.swift in Sources */,
-				9DA5B0E422AAA6AF005F7723 /* RecipesModuleViewInput.swift in Sources */,
+				9DA5B0E422AAA6AF005F7723 /* RecipesModulePresenterToView.swift in Sources */,
 				9DE3A65F2257909A00545750 /* Dictionary.swift in Sources */,
 				9DA5B0E622AAA6AF005F7723 /* RecipesModuleViewController.swift in Sources */,
-				9DA5B0EC22AAA6AF005F7723 /* RecipesModuleRouterInput.swift in Sources */,
+				9DA5B0EC22AAA6AF005F7723 /* RecipesModulePresenterToRouter.swift in Sources */,
 				9DE3A65C22578EA000545750 /* NetworkRequester.swift in Sources */,
 				9DE3A653225782FD00545750 /* Recipe.swift in Sources */,
 				9DA5B0E822AAA6AF005F7723 /* RecipesModuleInitializer.swift in Sources */,

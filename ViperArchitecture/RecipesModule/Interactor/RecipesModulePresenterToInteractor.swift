@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol RecipesModuleInteractorInput {
+protocol RecipesModulePresenterToInteractor {
     func fetchRecipes()
 }

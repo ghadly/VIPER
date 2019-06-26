@@ -35,7 +35,7 @@ class RecipesModuleInteractorTests: XCTestCase {
         XCTAssertFalse(interactorInterface.didFailedLoading)
     }
     
-    class MockPresenter: RecipesModuleInteractorOutput {
+    class MockPresenter: RecipesModuleInteractorToPresenter {
         var didFailedLoading = false
         
         func failedToFetchRecipes(error: Error) {

@@ -9,13 +9,13 @@ import Foundation
 
 class RecipesModulePresenter {
 
-    weak var view: RecipesModuleViewInput!
-    var interactor: RecipesModuleInteractorInput!
-    var router: RecipesModuleRouterInput!
+    weak var view: RecipesModulePresenterToView!
+    var interactor: RecipesModulePresenterToInteractor!
+    var router: RecipesModulePresenterToRouter!
 }
 
 
-extension RecipesModulePresenter: RecipesModuleViewOutput {
+extension RecipesModulePresenter: RecipesModuleViewToPresenter {
     func viewIsReady() {
         interactor.fetchRecipes()
     }
@@ -25,7 +25,7 @@ extension RecipesModulePresenter: RecipesModuleViewOutput {
     }
 }
 
-extension RecipesModulePresenter: RecipesModuleInteractorOutput {
+extension RecipesModulePresenter: RecipesModuleInteractorToPresenter {
     func recipesFetched(recipes: Recipes) {
         view.showRecipes(recipes: recipes)
     }

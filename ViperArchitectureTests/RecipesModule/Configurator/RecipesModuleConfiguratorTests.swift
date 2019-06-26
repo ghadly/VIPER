@@ -9,7 +9,7 @@
 import XCTest
 @testable import ViperArchitecture
 
-class RecipesModuleModuleConfiguratorTests: XCTestCase {
+class RecipesModuleConfiguratorTests: XCTestCase {
 
     override func setUp() {
         super.setUp()

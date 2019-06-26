@@ -9,10 +9,10 @@ import Foundation
 
 class RecipesModuleInteractor {
 
-    var interactorToPresenterProtocol: RecipesModuleInteractorOutput!
+    var interactorToPresenterProtocol: RecipesModuleInteractorToPresenter!
 }
 
-extension RecipesModuleInteractor: RecipesModuleInteractorInput {
+extension RecipesModuleInteractor: RecipesModulePresenterToInteractor {
     func fetchRecipes() {
         NetworkRequester.getRecipes { (data, response, error) in
             if let responseData = data {
