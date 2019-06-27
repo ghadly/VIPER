@@ -1,9 +1,9 @@
 import UIKit
+
 public class BaseNetwork: NSObject {
+    internal override init() {}
 
-    fileprivate override init() {}
-
-    fileprivate static func config(_ URI: String) -> (request: URLRequest, session: URLSession) {
+    fileprivate func config(_ URI: String) -> (request: URLRequest, session: URLSession) {
         let config = URLSessionConfiguration.default
         config.httpAdditionalHeaders = ["Content-Type": "application/json", "Accept": "application/json", "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2MzExMywiY291bnRyeSI6InVzIiwiYnJhbmQiOiJtcyIsImlzcyI6Im1zIiwidHMiOjE1NTQzNzUyNTN9.Tr-G5RUQKvgCRzrAxUlesxf3ntdMJ0prQ_Z1yV_aAlw"]
 
@@ -27,8 +27,8 @@ public class BaseNetwork: NSObject {
     }
 
     // swiftlint:disable function_parameter_count
-    static func requestData(_ URI: String, completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
-        let configuration = BaseNetwork.config(URI)
+    func requestData(_ URI: String, completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
+        let configuration = config(URI)
         let dataTask = configuration.session.dataTask(with: configuration.request, completionHandler: { (data, response, error) in
 
                 if (response as! HTTPURLResponse).statusCode >= 200 && (response as! HTTPURLResponse).statusCode < 300 {

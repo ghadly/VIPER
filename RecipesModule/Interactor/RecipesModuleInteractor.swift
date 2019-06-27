@@ -11,11 +11,12 @@ import NetworkLayer
 class RecipesModuleInteractor {
 
     var interactorToPresenterProtocol: RecipesModuleInteractorToPresenter!
+    var networkLayer: NetworkRequester = NetworkRequester()
 }
 
 extension RecipesModuleInteractor: RecipesModulePresenterToInteractor {
     func fetchRecipes() {
-        NetworkRequester.getRecipes { (data, response, error) in
+        networkLayer.getRecipes { (data, response, error) in
             if let responseData = data {
                 let decoder = JSONDecoder()
                 do {
