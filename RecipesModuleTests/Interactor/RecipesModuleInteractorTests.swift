@@ -13,7 +13,7 @@ import XCTest
 class RecipesModuleInteractorTests: XCTestCase {
 
     var interactorInterface = MockPresenter()
-    var mockInteractor = MockInteractor()
+    var mockInteractor = RecipesModuleInteractor()
     
     override func setUp() {
         super.setUp()
@@ -26,14 +26,18 @@ class RecipesModuleInteractorTests: XCTestCase {
         super.tearDown()
     }
 
-    func testFetchRecipesFailed() {
-        mockInteractor.failedToload()
-        XCTAssertTrue(interactorInterface.didFailedLoading)
+    func testFetchRecipesSuccess() {
+        let mockNetworkLayer = SuccessMockNetworkLayer()
+        mockInteractor.networkLayer = mockNetworkLayer
+        mockInteractor.fetchRecipes()
+        XCTAssertFalse(interactorInterface.didFailedLoading)
     }
     
-    func testFetchRecipes() {
-        mockInteractor.success()
-        XCTAssertFalse(interactorInterface.didFailedLoading)
+    func testFetchRecipesFailure() {
+        let mockNetworkLayer = FailureMockNetworkLayer()
+        mockInteractor.networkLayer = mockNetworkLayer
+        mockInteractor.fetchRecipes()
+        XCTAssertTrue(interactorInterface.didFailedLoading)
     }
     
     class MockPresenter: RecipesModuleInteractorToPresenter {
@@ -48,13 +52,22 @@ class RecipesModuleInteractorTests: XCTestCase {
         }
     }
     
-    class MockInteractor: RecipesModuleInteractor {
-        func failedToload() {
-            interactorToPresenterProtocol.failedToFetchRecipes(error: NSError(domain: "something", code: 400, userInfo: nil))
+    class SuccessMockNetworkLayer: NetworkRequester {
+        override func getRecipes(completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
+            if let path = Bundle.main.path(forResource: "recipes", ofType: "json") {
+                do {
+                    let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                    completion(data, nil, nil)
+                } catch {
+                }
+            }
+            
         }
-        
-        func success() {
-            interactorToPresenterProtocol.recipesFetched(recipes: Recipes.init(data: []))
+    }
+    
+    class FailureMockNetworkLayer: NetworkRequester {
+        override func getRecipes(completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
+            completion(Data(base64Encoded: "Data"), nil, NSError(domain: "something went wrong", code: 400, userInfo: nil))
         }
     }
 }
