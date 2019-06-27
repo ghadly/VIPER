@@ -11,3 +11,19 @@ warn("Big PR") if git.lines_of_code > 500
 # Don't let testing shortcuts get into master by accident
 fail("fdescribe left in tests") if `grep -r fdescribe specs/ `.length > 1
 fail("fit left in tests") if `grep -r fit specs/ `.length > 1
+
+
+# SwiftLint
+
+# swiftlint.lint_files inline_mode: true
+
+require 'git_diff_parser'
+
+diff = GitDiffParser::Patches.parse(github.pr_diff)
+dir = "#{Dir.pwd}/"
+swiftlint.lint_files(inline_mode: true) { |violation|
+  diff_filename = violation['file'].gsub(dir, '')
+  file_patch = diff.find_patch_by_file(diff_filename)
+  file_patch != nil && file_patch.changed_lines.any? { |line| line.number == violation['line']}
+}
+

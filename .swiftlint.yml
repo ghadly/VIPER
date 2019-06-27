@@ -1,0 +1,149 @@
+excluded: # paths to ignore during linting.
+ - Pods
+ - gem
+
+whitelist_rules:
+ - attributes
+ - closing_brace
+ - closure_end_indentation
+ - closure_parameter_position
+ - closure_spacing
+ - colon
+ - comma
+ - conditional_returns_on_newline
+ - control_statement
+ - custom_rules
+ - cyclomatic_complexity
+ - empty_count
+ - empty_parameters
+ - empty_parentheses_with_trailing_closure
+ - for_where
+ - function_body_length
+ - function_parameter_count
+ - generic_type_name
+ - large_tuple
+ - leading_whitespace
+ - let_var_whitespace
+ - legacy_cggeometry_functions
+ - legacy_constant
+ - legacy_constructor
+ - legacy_nsgeometry_functions
+ - line_length
+ - mark
+ - nesting
+ - opening_brace
+ - operator_usage_whitespace
+ - operator_whitespace
+ - overridden_super_call
+ - private_over_fileprivate
+ - private_unit_test
+ - prohibited_super_call
+ - redundant_discardable_let
+ - redundant_nil_coalescing
+ - redundant_optional_initialization
+ - redundant_string_enum_value
+ - redundant_void_return
+ - return_arrow_whitespace
+ - shorthand_operator
+ - sorted_imports
+ - statement_position
+ - switch_case_on_newline
+ - syntactic_sugar
+ - trailing_comma
+ - trailing_newline
+ - trailing_semicolon
+ - trailing_whitespace
+ - type_body_length
+ - type_name
+ - unused_closure_parameter
+ - unused_enumerated
+ - valid_ibinspectable
+ - vertical_parameter_alignment
+ - vertical_whitespace
+ - weak_delegate
+
+closure_end_indentation:
+  severity: error
+closure_parameter_position:
+  severity: error
+colon:
+  severity: error
+conditional_returns_on_newline:
+  severity: error
+control_statement:
+  severity: error
+empty_count:
+  severity: error
+for_where:
+  severity: error
+generic_type_name:
+  severity: error
+let_var_whitespace:
+  severity: error
+operator_whitespace:
+  severity: error
+overridden_super_call:
+  severity: error
+private_unit_test:
+  severity: error
+prohibited_super_call:
+  severity: error
+redundant_string_enum_value:
+  severity: error
+shorthand_operator:
+  severity: error
+sorted_imports:
+  severity: error
+switch_case_on_newline:
+  severity: error
+syntactic_sugar:
+  severity: error
+type_name:
+  severity: error
+unused_enumerated:
+  severity: error
+valid_ibinspectable:
+  severity: error
+vertical_parameter_alignment:
+  severity: error
+weak_delegate:
+  severity: error
+
+line_length:
+  warning: 200
+  error: 200
+
+large_tuple: 4
+
+type_body_length:
+  warning: 400
+  error: 450
+function_parameter_count:
+  warning: 5
+  error: 6
+
+function_body_length:
+  warning: 40
+  error: 60
+
+custom_rules:
+ method_params_closure_spacing: # rule identifier
+  included: ".*\\.swift" # regex that defines paths to include during linting. optional.
+  name: "spacing between method name and params closure" # rule name. optional.
+  regex: "(func [A-Za-z0-9]*[ ]+\\()" # matching pattern
+  message: "incorrect spacing between method name and params closure " # violation message. optional.
+  severity: error
+  no_hiding_in_strings:
+    regex: "(func [A-Za-z0-9]*[ ]+\\()"
+    match_kinds: string
+
+ newline_between_methods: # rule identifier
+  included: ".*\\.swift" # regex that defines paths to include during linting. optional.
+  name: "2 lines between each method" # rule name. optional.
+  regex: "(\\}[\t\n][a-zA-Z0-9 ]*func)" # matching pattern
+  message: "incorrect spacing between methods" # violation message. optional.
+  severity: error
+  no_hiding_in_strings:
+    regex: "(\\}[\t\n][a-zA-Z0-9 ]*func)"
+    match_kinds: string
+
