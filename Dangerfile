@@ -15,9 +15,9 @@ fail("fit left in tests") if `grep -r fit specs/ `.length > 1
 
 # SwiftLint
 
-# swiftlint.lint_files inline_mode: true
+swiftlint.lint_files inline_mode: true
 
-require 'git_diff_parser'
+# require 'git_diff_parser'
 
 diff = GitDiffParser::Patches.parse(github.pr_diff)
 dir = "#{Dir.pwd}/"
