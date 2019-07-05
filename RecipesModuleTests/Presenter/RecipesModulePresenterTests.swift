@@ -15,7 +15,7 @@ class RecipesModulePresenterTests: XCTestCase {
     var presenter: MockPresenter = MockPresenter()
     var interactor: MockInteractor = MockInteractor()
     var router: MockRouter = MockRouter()
-    var view: RecipesModulePresenterToView = MockView()
+    var view: MockView = MockView()
     
     override func setUp() {
         super.setUp()
@@ -38,6 +38,21 @@ class RecipesModulePresenterTests: XCTestCase {
     func testFetchingRecipes(){
         presenter.viewIsReady()
         XCTAssertTrue(interactor.fetchingRecipes)
+    }
+    
+    func testErrorMessage() {
+        presenter.failedToFetchRecipes(error: NSError(domain: "Error", code: 500, userInfo: nil))
+        XCTAssertTrue(self.view.failedToLoad)
+    }
+    
+    func testLoadRecipes() {
+        presenter.recipesFetched(recipes: Recipes(data: []))
+        XCTAssertFalse(self.view.failedToLoad)
+    }
+    
+    func testOpenDetailsView() {
+        presenter.showDetailsScreen(for: Recipe())
+        XCTAssertTrue(self.router.didOpenDetails)
     }
 
     class MockInteractor: RecipesModulePresenterToInteractor {
