@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D0B227D22CF3984006F4149 /* Recipes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D0B227C22CF3984006F4149 /* Recipes.storyboard */; };
+		9D0B227E22CF3E30006F4149 /* Recipes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D0B227C22CF3984006F4149 /* Recipes.storyboard */; };
+		9D0B227F22CF4031006F4149 /* Recipes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D0B227C22CF3984006F4149 /* Recipes.storyboard */; };
 		9D872F7B22C3BC0200CD6117 /* RecipesModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D872F7222C3BC0100CD6117 /* RecipesModule.framework */; };
 		9D872F8222C3BC0200CD6117 /* RecipesModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D872F8122C3BC0200CD6117 /* RecipesModuleTests.swift */; };
 		9D872F8422C3BC0200CD6117 /* RecipesModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D872F7422C3BC0200CD6117 /* RecipesModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -113,6 +116,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9D0B227C22CF3984006F4149 /* Recipes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recipes.storyboard; sourceTree = "<group>"; };
 		9D872F7222C3BC0100CD6117 /* RecipesModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RecipesModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D872F7422C3BC0200CD6117 /* RecipesModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecipesModule.h; sourceTree = "<group>"; };
 		9D872F7522C3BC0200CD6117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -228,6 +232,7 @@
 				9D872F9E22C3BC9E00CD6117 /* View */,
 				9D872F7422C3BC0200CD6117 /* RecipesModule.h */,
 				9D872F7522C3BC0200CD6117 /* Info.plist */,
+				9D0B227C22CF3984006F4149 /* Recipes.storyboard */,
 			);
 			path = RecipesModule;
 			sourceTree = "<group>";
@@ -675,6 +680,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D0B227D22CF3984006F4149 /* Recipes.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,6 +688,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D0B227E22CF3E30006F4149 /* Recipes.storyboard in Resources */,
 				9DFC9F3A22C4F12200992DB6 /* recipes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -704,6 +711,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D0B227F22CF4031006F4149 /* Recipes.storyboard in Resources */,
 				9DE3A5B822574BBD00545750 /* LaunchScreen.storyboard in Resources */,
 				9DE3A5B522574BBD00545750 /* Assets.xcassets in Resources */,
 				9DE3A5B322574BBB00545750 /* Main.storyboard in Resources */,

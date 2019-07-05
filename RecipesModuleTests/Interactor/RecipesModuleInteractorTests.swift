@@ -54,7 +54,7 @@ class RecipesModuleInteractorTests: XCTestCase {
     
     class SuccessMockNetworkLayer: NetworkRequester {
         override func getRecipes(completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
-            if let path = Bundle.main.path(forResource: "recipes", ofType: "json") {
+            if let path = Bundle(for: self.classForCoder).path(forResource: "recipes", ofType: "json") {
                 do {
                     let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                     completion(data, nil, nil)
@@ -67,7 +67,7 @@ class RecipesModuleInteractorTests: XCTestCase {
     
     class FailureMockNetworkLayer: NetworkRequester {
         override func getRecipes(completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
-            completion(Data(base64Encoded: "Data"), nil, NSError(domain: "something went wrong", code: 400, userInfo: nil))
+            completion(nil, nil, NSError(domain: "something went wrong", code: 400, userInfo: nil))
         }
     }
 }
