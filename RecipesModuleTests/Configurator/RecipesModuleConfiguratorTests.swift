@@ -6,8 +6,8 @@
 //  Copyright © 2019 George. All rights reserved.
 //
 
-import XCTest
 @testable import RecipesModule
+import XCTest
 
 class RecipesModuleConfiguratorTests: XCTestCase {
 
@@ -43,12 +43,12 @@ class RecipesModuleConfiguratorTests: XCTestCase {
         XCTAssertNotNil(interactor.interactorToPresenterProtocol, "output in AuthenticationModuleInteractor is nil after configuration")
     }
 
-    
     class RecipesModuleViewControllerMock: RecipesModuleViewController {
 
         var setupInitialStateDidCall = false
 
         override func viewDidLoad() {
+            super.viewDidLoad()
             setupInitialStateDidCall = true
         }
     }

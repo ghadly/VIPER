@@ -15,12 +15,11 @@ class RecipesModulePresenter {
     var router: RecipesModulePresenterToRouter!
 }
 
-
 extension RecipesModulePresenter: RecipesModuleViewToPresenter {
     func viewIsReady() {
         interactor.fetchRecipes()
     }
-    
+
     func showDetailsScreen(for recipe: Recipe) {
         router.openRecipeDetailsScreen(with: recipe)
     }
@@ -30,7 +29,7 @@ extension RecipesModulePresenter: RecipesModuleInteractorToPresenter {
     func recipesFetched(recipes: Recipes) {
         view.showRecipes(recipes: recipes)
     }
-    
+
     func failedToFetchRecipes(error: Error) {
         view.showErrorMessage()
     }

@@ -6,15 +6,15 @@
 //  Copyright © 2019 George. All rights reserved.
 //
 
-import XCTest
-@testable import RecipesModule
 @testable import NetworkLayer
+@testable import RecipesModule
+import XCTest
 
 class RecipesModuleInteractorTests: XCTestCase {
 
     var interactorInterface = MockPresenter()
     var mockInteractor = RecipesModuleInteractor()
-    
+
     override func setUp() {
         super.setUp()
         mockInteractor.interactorToPresenterProtocol = interactorInterface
@@ -32,26 +32,26 @@ class RecipesModuleInteractorTests: XCTestCase {
         mockInteractor.fetchRecipes()
         XCTAssertFalse(interactorInterface.didFailedLoading)
     }
-    
+
     func testFetchRecipesFailure() {
         let mockNetworkLayer = FailureMockNetworkLayer()
         mockInteractor.networkLayer = mockNetworkLayer
         mockInteractor.fetchRecipes()
         XCTAssertTrue(interactorInterface.didFailedLoading)
     }
-    
+
     class MockPresenter: RecipesModuleInteractorToPresenter {
         var didFailedLoading = false
-        
+
         func failedToFetchRecipes(error: Error) {
             didFailedLoading = true
         }
-        
+
         func recipesFetched(recipes: Recipes) {
             didFailedLoading = false
         }
     }
-    
+
     class SuccessMockNetworkLayer: NetworkRequester {
         override func getRecipes(completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
             if let path = Bundle(for: self.classForCoder).path(forResource: "recipes", ofType: "json") {
@@ -61,10 +61,10 @@ class RecipesModuleInteractorTests: XCTestCase {
                 } catch {
                 }
             }
-            
+
         }
     }
-    
+
     class FailureMockNetworkLayer: NetworkRequester {
         override func getRecipes(completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
             completion(nil, nil, NSError(domain: "something went wrong", code: 400, userInfo: nil))

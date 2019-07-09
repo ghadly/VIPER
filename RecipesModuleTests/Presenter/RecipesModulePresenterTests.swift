@@ -6,9 +6,9 @@
 //  Copyright © 2019 George. All rights reserved.
 //
 
-import XCTest
-@testable import RecipesModule
 @testable import NetworkLayer
+@testable import RecipesModule
+import XCTest
 
 class RecipesModulePresenterTests: XCTestCase {
 
@@ -16,7 +16,7 @@ class RecipesModulePresenterTests: XCTestCase {
     var interactor: MockInteractor = MockInteractor()
     var router: MockRouter = MockRouter()
     var view: MockView = MockView()
-    
+
     override func setUp() {
         super.setUp()
         presenter.interactor = interactor
@@ -29,27 +29,27 @@ class RecipesModulePresenterTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+
     func testDidOpenDetailsScreen() {
         presenter.showDetailsScreen(for: Recipe())
         XCTAssertTrue(router.didOpenDetails)
     }
-    
-    func testFetchingRecipes(){
+
+    func testFetchingRecipes() {
         presenter.viewIsReady()
         XCTAssertTrue(interactor.fetchingRecipes)
     }
-    
+
     func testErrorMessage() {
         presenter.failedToFetchRecipes(error: NSError(domain: "Error", code: 500, userInfo: nil))
         XCTAssertTrue(self.view.failedToLoad)
     }
-    
+
     func testLoadRecipes() {
         presenter.recipesFetched(recipes: Recipes(data: []))
         XCTAssertFalse(self.view.failedToLoad)
     }
-    
+
     func testOpenDetailsView() {
         presenter.showDetailsScreen(for: Recipe())
         XCTAssertTrue(self.router.didOpenDetails)
@@ -57,6 +57,7 @@ class RecipesModulePresenterTests: XCTestCase {
 
     class MockInteractor: RecipesModulePresenterToInteractor {
         var fetchingRecipes = false
+
         func fetchRecipes() {
             fetchingRecipes = true
         }
@@ -71,14 +72,14 @@ class RecipesModulePresenterTests: XCTestCase {
 
     class MockPresenter: RecipesModulePresenter {
     }
-    
+
     class MockView: RecipesModulePresenterToView {
         var failedToLoad = false
-        
+
         func showRecipes(recipes: Recipes) {
             failedToLoad = false
         }
-        
+
         func showErrorMessage() {
             failedToLoad = true
         }

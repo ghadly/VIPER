@@ -11,7 +11,6 @@
 		9D0B227E22CF3E30006F4149 /* Recipes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D0B227C22CF3984006F4149 /* Recipes.storyboard */; };
 		9D0B227F22CF4031006F4149 /* Recipes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D0B227C22CF3984006F4149 /* Recipes.storyboard */; };
 		9D872F7B22C3BC0200CD6117 /* RecipesModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D872F7222C3BC0100CD6117 /* RecipesModule.framework */; };
-		9D872F8222C3BC0200CD6117 /* RecipesModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D872F8122C3BC0200CD6117 /* RecipesModuleTests.swift */; };
 		9D872F8422C3BC0200CD6117 /* RecipesModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D872F7422C3BC0200CD6117 /* RecipesModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D872F8722C3BC0200CD6117 /* RecipesModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D872F7222C3BC0100CD6117 /* RecipesModule.framework */; };
 		9D872F8822C3BC0200CD6117 /* RecipesModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D872F7222C3BC0100CD6117 /* RecipesModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -121,7 +120,6 @@
 		9D872F7422C3BC0200CD6117 /* RecipesModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecipesModule.h; sourceTree = "<group>"; };
 		9D872F7522C3BC0200CD6117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D872F7A22C3BC0200CD6117 /* RecipesModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipesModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D872F8122C3BC0200CD6117 /* RecipesModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesModuleTests.swift; sourceTree = "<group>"; };
 		9D872F8322C3BC0200CD6117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D872F9022C3BC8200CD6117 /* ViperArchitectureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperArchitectureTests.swift; sourceTree = "<group>"; };
 		9D872F9322C3BC9D00CD6117 /* RecipesModulePresenterToRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesModulePresenterToRouter.swift; sourceTree = "<group>"; };
@@ -245,7 +243,6 @@
 				9D872FB122C3BCAE00CD6117 /* Presenter */,
 				9D872FB522C3BCAE00CD6117 /* Router */,
 				9D872FAF22C3BCAE00CD6117 /* View */,
-				9D872F8122C3BC0200CD6117 /* RecipesModuleTests.swift */,
 				9D872F8322C3BC0200CD6117 /* Info.plist */,
 				9DFC9F3922C4F12200992DB6 /* recipes.json */,
 			);
@@ -760,7 +757,6 @@
 				9D872FB922C3BCAE00CD6117 /* RecipesModulePresenterTests.swift in Sources */,
 				9D872FBA22C3BCAE00CD6117 /* RecipesModuleInteractorTests.swift in Sources */,
 				9D872FB722C3BCAE00CD6117 /* RecipesModuleConfiguratorTests.swift in Sources */,
-				9D872F8222C3BC0200CD6117 /* RecipesModuleTests.swift in Sources */,
 				9D872FBB22C3BCAE00CD6117 /* RecipesModuleRouterTests.swift in Sources */,
 				9D872FB822C3BCAE00CD6117 /* RecipesModuleViewTests.swift in Sources */,
 			);

@@ -6,9 +6,9 @@ public class NetworkRequester: BaseNetwork {
     public override init() {
         super.init()
     }
-    
+
     public func getRecipes(completion:@escaping  (Data?, URLResponse?, Error?) -> Void) {
         let uri = "\(apiHost)recipes.json"
-        requestData(uri,completion: completion)
+        requestData(uri, completion: completion)
     }
 }

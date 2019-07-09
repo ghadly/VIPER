@@ -5,20 +5,22 @@ public class BaseNetwork: NSObject {
 
     fileprivate func config(_ URI: String) -> (request: URLRequest, session: URLSession) {
         let config = URLSessionConfiguration.default
-        config.httpAdditionalHeaders = ["Content-Type": "application/json", "Accept": "application/json", "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2MzExMywiY291bnRyeSI6InVzIiwiYnJhbmQiOiJtcyIsImlzcyI6Im1zIiwidHMiOjE1NTQzNzUyNTN9.Tr-G5RUQKvgCRzrAxUlesxf3ntdMJ0prQ_Z1yV_aAlw"]
+        config.httpAdditionalHeaders = ["Content-Type": "application/json",
+                                        "Accept": "application/json",
+                                        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2MzExMywiY291bnRyeSI6InVzIiwiYnJhbmQiOiJtcyIsImlzcyI6Im1zIiwidHMiOjE1NTQzNzUyNTN9.Tr-G5RUQKvgCRzrAxUlesxf3ntdMJ0prQ_Z1yV_aAlw"
+        ]
 
         let session: URLSession = URLSession(configuration: config, delegate: nil, delegateQueue: nil)
 
-        let params: [String: String] = ["brand":"ms",
-                                        "client_id":"ios",
-                                        "country":"us",
-                                        "ios_appbuild":"0",
-                                        "ios_appversion":"2.0.91",
-                                        "ios_model":"Simulator",
-                                        "ios_osversion":"12.1",
-                                        "locale":"en-US",
-                                        "token":"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2MzExMywiY291bnRyeSI6InVzIiwiYnJhbmQiOiJtcyIsImlzcyI6Im1zIiwidHMiOjE1NTQzNzUyNTN9.Tr-G5RUQKvgCRzrAxUlesxf3ntdMJ0prQ_Z1yV_aAlw",
-                                        "ts":"1554477091",
+        let params: [String: String] = ["brand": "ms",
+                                        "client_id": "ios",
+                                        "country": "us",
+                                        "ios_appbuild": "0",
+                                        "ios_appversion": "2.0.91",
+                                        "ios_model": "Simulator",
+                                        "ios_osversion": "12.1",
+                                        "locale": "en-US",
+                                        "ts": "1554477091"
                                         ]
 
         var request = URLRequest(url: URL(string: "\(URI)?\(params.stringFromHttpParameters())")!)

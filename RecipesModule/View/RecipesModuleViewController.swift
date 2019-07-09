@@ -6,14 +6,14 @@
 //  Copyright © 2019 George. All rights reserved.
 //
 
-import UIKit
 import NetworkLayer
+import UIKit
 
 class RecipesModuleViewController: UIViewController {
 
     @IBOutlet weak var recipesList: UITableView!
     var viewToPresenterProtocol: RecipesModuleViewToPresenter!
-    
+
     private var recipes: Recipes? = nil {
         didSet {
             recipesList.reloadData()
@@ -30,7 +30,7 @@ extension RecipesModuleViewController: RecipesModulePresenterToView {
     func showRecipes(recipes: Recipes) {
         self.recipes = recipes
     }
-    
+
     func showErrorMessage() {
         let alert = UIAlertController(title: "Alert", message: "Problem Fetching recipes", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
@@ -46,15 +46,15 @@ extension RecipesModuleViewController: UITableViewDataSource, UITableViewDelegat
         cell.detailTextLabel?.text = recipe?.subtitle
         return cell
     }
-    
+
     public func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
+
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipes?.data.count ?? 0
     }
-    
+
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewToPresenterProtocol.showDetailsScreen(for: recipes!.data[indexPath.row])
     }

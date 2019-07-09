@@ -16,7 +16,7 @@ class RecipesModuleInteractor {
 
 extension RecipesModuleInteractor: RecipesModulePresenterToInteractor {
     func fetchRecipes() {
-        networkLayer.getRecipes { (data, response, error) in
+        networkLayer.getRecipes { (data, _, error) in
             if let responseData = data {
                 let decoder = JSONDecoder()
                 do {

@@ -7,15 +7,14 @@
 //
 
 import UIKit
+
 class RecipesModuleInitializer: NSObject {
 
-    //Connect with object on storyboard
     @IBOutlet weak var recipesModuleViewController: RecipesModuleViewController!
 
     override func awakeFromNib() {
-
+        super.awakeFromNib()
         let configurator = RecipesModuleConfigurator()
         configurator.configureModuleForViewInput(viewInput: recipesModuleViewController)
     }
-
 }

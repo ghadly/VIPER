@@ -8,7 +8,7 @@
 
 import UIKit
 class RecipesModuleConfigurator {
-    
+
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
 
         if let viewController = viewInput as? RecipesModuleViewController {

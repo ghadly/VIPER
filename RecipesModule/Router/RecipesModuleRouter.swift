@@ -13,6 +13,6 @@ class RecipesModuleRouter {
 
 extension RecipesModuleRouter: RecipesModulePresenterToRouter {
     func openRecipeDetailsScreen(with recipe: Recipe) {
-        //Mark: this will call another module to open the details screen
+        // MARK: this will call another module to open the details screen
     }
 }

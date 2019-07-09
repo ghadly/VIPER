@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#Path to swiftlint
+SWIFT_LINT=/usr/local/bin/swiftlint
+
+#if $SWIFT_LINT >/dev/null 2>&1; then
+if [[ -e "$(command -v fastlane)" ]]; then
+    if [[ -e "${SWIFT_LINT}" ]]; then
+        echo -e "\033[1;32m Start Linting command... \033[0m"
+        bundle exec fastlane run swiftlint config_file:.swiftlint.yml
+
+        RESULT=$?
+        exit $RESULT
+    else
+        echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
+    fi
+else
+    echo "warning: Fastlane not installed, download from https://docs.fastlane.tools"
+fi
