@@ -65,7 +65,7 @@ class RecipesModulePresenterTests: XCTestCase {
 
     class MockRouter: RecipesModulePresenterToRouter {
         var didOpenDetails = false
-        
+
         func openRecipeDetailsScreen(with recipe: Recipe) {
             didOpenDetails = true
         }
