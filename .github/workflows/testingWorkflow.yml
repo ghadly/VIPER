@@ -1,6 +1,6 @@
 name: CI
 
-on: 
+on:
   pull_request:
     branches:
     - master
@@ -9,12 +9,10 @@ jobs:
   build:
 
     runs-on: macOS-10.14
-    
+
     steps:
     - uses: actions/checkout@v1
     - name: install bundle
       run: Bundle install
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+    - name: Run testing lane
+      run: Bundle exec fastlane test

@@ -14,10 +14,26 @@
 # update_fastlane
 
 default_platform(:ios)
+DEVICES = ["iPhone 8 Plus"]
 
 platform :ios do
   desc "Description of what the lane does"
   lane :test do
   	run_scan("RecipesModule", "Debug")
   end
+
+
+def run_scan(schema, configuration)
+scan(
+  project: "ViperArchitecture.xcodeproj",
+  devices: DEVICES,
+  scheme: schema,
+  configuration: configuration,
+  derived_data_path: "DerivedData",
+  output_types:"html",
+  output_files:"#{schema}.html",
+  clean: true
+)
+end
+
 end
