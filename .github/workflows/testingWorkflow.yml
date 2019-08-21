@@ -1,0 +1,18 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  build:
+
+    runs-on: macOS-10.14
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: install bundle
+      run: Bundle install
+    - name: Run testing lane
+      run: Bundle exec fastlane test
