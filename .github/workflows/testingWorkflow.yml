@@ -12,6 +12,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - env:
+          test_scheme: ${{ secrets.test_scheme }}
     - name: install bundle
       run: Bundle install
     - name: Run testing lane
