@@ -12,8 +12,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+      secrets: [test_scheme]
       env:
           test_scheme: ${{ secrets.test_scheme }}
+    - name: Print env
+      run: |
+          echo ${{ secrets.test_scheme }},
+          echo ${{ test_scheme}},
+          echo test_scheme.
     - name: install bundle
       run: Bundle install
     - name: Run testing lane
