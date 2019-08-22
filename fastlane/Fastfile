@@ -19,7 +19,7 @@ DEVICES = ["iPhone 8 Plus"]
 platform :ios do
   desc "Description of what the lane does"
   lane :test do
-  	run_scan(ENV["test_scheme"], "Debug")
+  	run_scan("#{ENV['test_scheme']}", "Debug")
   end
 
 
