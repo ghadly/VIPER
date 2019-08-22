@@ -12,6 +12,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+      secrets: "test_scheme"
       env:
           test_scheme: ${{ secrets.test_scheme }}
     - name: install bundle
