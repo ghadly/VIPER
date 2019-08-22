@@ -15,4 +15,6 @@ jobs:
     - name: install bundle
       run: Bundle install
     - name: Run testing lane
+      env:
+        test_scheme: ${{ secrets.test_scheme }}
       run: Bundle exec fastlane test
