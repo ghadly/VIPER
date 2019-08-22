@@ -15,8 +15,7 @@ jobs:
       env:
           test_scheme: ${{ secrets.test_scheme }}
     - name: Print env
-      run:
-          echo $test_scheme,
+      run: echo $test_scheme
     - name: install bundle
       run: Bundle install
     - name: Run testing lane
